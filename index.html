@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdul Sulu-Gambari — BI Dashboard Portfolio</title>
+  <title>Abdulrahman Sulu-Gambari — Senior BI Analyst</title>
   <style>
 :root {
   --teal:       #1a6b68;
@@ -24,35 +24,95 @@
     nav { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
     nav .logo { color: var(--white); font-weight: 700; font-size: 1rem; letter-spacing: .05em; }
     nav .logo span { color: #5eead4; }
-    nav ul { list-style: none; display: flex; gap: 1.5rem; }
-    nav ul a { color: #d1d5db; text-decoration: none; font-size: .85rem; transition: color .2s; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav ul a { color: #d1d5db; text-decoration: none; font-size: .82rem; transition: color .2s; }
     nav ul a:hover { color: var(--white); }
+    nav .nav-divider { color: #4b5563; font-size: .82rem; }
 
     /* HERO */
-    .hero { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); color: var(--white); padding: 5rem 2rem 4rem; text-align: center; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -.02em; }
+    .hero { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); color: var(--white); padding: 4rem 2rem 3.5rem; text-align: center; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -.02em; }
     .hero h1 span { color: #5eead4; }
-    .hero p { margin-top: .75rem; color: #9ca3af; font-size: 1.1rem; }
-    .badges { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; margin-top: 1.75rem; }
-    .badge { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: var(--white); padding: .45rem 1rem; border-radius: 999px; font-size: .82rem; text-decoration: none; transition: background .2s; }
+    .hero .title { color: #9ca3af; font-size: 1.1rem; margin-top: .4rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; margin-top: 1.5rem; }
+    .badge { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: var(--white); padding: .4rem .9rem; border-radius: 999px; font-size: .8rem; text-decoration: none; transition: background .2s; }
     .badge:hover { background: rgba(255,255,255,.15); }
-    .badge.teal { background: var(--teal); border-color: var(--teal); }
+    .badge.filled { background: var(--teal); border-color: var(--teal); }
 
     /* METRICS STRIP */
-    .metrics { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); color: var(--white); padding: 2.5rem 2rem; }
-    .metrics-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
+    .metrics { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); color: var(--white); padding: 2rem 2rem; border-top: 1px solid rgba(255,255,255,.08); }
+    .metrics-grid { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.25rem; }
     .metric-card { text-align: center; }
-    .metric-card .num { font-size: 2rem; font-weight: 800; line-height: 1; }
-    .metric-card .label { font-size: .8rem; opacity: .85; margin-top: .3rem; }
+    .metric-card .num { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+    .metric-card .label { font-size: .75rem; opacity: .8; margin-top: .3rem; }
 
-    /* SECTIONS */
+    /* LAYOUT */
     .container { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
-    section { padding: 4rem 0; }
+    section { padding: 3.5rem 0; }
     section + section { border-top: 1px solid var(--border); }
-
-    h2.section-title { font-size: 1.6rem; font-weight: 800; color: var(--dark); margin-bottom: 1.5rem; display: flex; align-items: center; gap: .6rem; }
+    h2.section-title { font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 1.5rem; display: flex; align-items: center; gap: .6rem; }
     h2.section-title::after { content: ''; flex: 1; height: 2px; background: var(--border); }
 
+    /* CV — TWO COLUMN */
+    .cv-grid { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; }
+    @media (max-width: 760px) { .cv-grid { grid-template-columns: 1fr; } nav ul { display: none; } }
+
+    /* CV SIDEBAR */
+    .cv-sidebar {}
+    .cv-sidebar-block { margin-bottom: 2rem; }
+    .cv-sidebar-block h3 { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); border-bottom: 2px solid var(--teal-light); padding-bottom: .4rem; margin-bottom: .9rem; }
+    .cv-contact-item { display: flex; align-items: center; gap: .5rem; font-size: .88rem; color: var(--mid); margin-bottom: .45rem; }
+    .cv-contact-item a { color: var(--teal); text-decoration: none; }
+    .cv-contact-item a:hover { text-decoration: underline; }
+    .cv-contact-icon { width: 16px; text-align: center; color: var(--teal); flex-shrink: 0; }
+
+    .edu-item { margin-bottom: 1.1rem; }
+    .edu-item .degree { font-size: .88rem; font-weight: 700; color: var(--dark); line-height: 1.3; }
+    .edu-item .school { font-size: .82rem; color: var(--mid); }
+    .edu-item .location { font-size: .78rem; color: var(--muted); }
+
+    .cert-item { font-size: .85rem; color: var(--mid); padding: .3rem 0; border-bottom: 1px solid var(--border); }
+    .cert-item:last-child { border-bottom: none; }
+
+    .lang-item { display: flex; justify-content: space-between; align-items: center; font-size: .85rem; padding: .3rem 0; }
+    .lang-item .lang-name { font-weight: 600; color: var(--dark); }
+    .lang-item .lang-level { font-size: .75rem; color: var(--muted); }
+
+    /* CV MAIN */
+    .cv-profile { font-size: .95rem; color: var(--mid); line-height: 1.7; margin-bottom: 2rem; padding: 1.25rem 1.5rem; background: var(--white); border-left: 4px solid var(--teal); border-radius: 0 8px 8px 0; border: 1px solid var(--border); border-left: 4px solid var(--teal); }
+
+    .exp-item { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .exp-header { margin-bottom: .6rem; }
+    .exp-role { font-size: 1rem; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: .9rem; font-weight: 600; color: var(--teal); }
+    .exp-meta { font-size: .8rem; color: var(--muted); margin-top: .2rem; }
+    .exp-bullets { list-style: none; margin-top: .6rem; }
+    .exp-bullets li { font-size: .88rem; color: var(--mid); padding: .25rem 0 .25rem 1.1rem; position: relative; line-height: 1.55; }
+    .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--teal); font-size: .75rem; top: .35rem; }
+    .exp-bullets li strong { color: var(--dark); }
+
+    /* SKILLS GRID */
+    .skills-blocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .skill-block { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
+    .skill-block h4 { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: .6rem; }
+    .skill-block ul { list-style: none; }
+    .skill-block ul li { font-size: .82rem; color: var(--mid); padding: .18rem 0; }
+
+    /* BI TOOLS TABLE */
+    .skills-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    .skills-table th { text-align: left; padding: .6rem 1rem; background: #f3f4f6; color: var(--muted); font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; }
+    .skills-table td { padding: .75rem 1rem; border-top: 1px solid var(--border); }
+    .bar-wrap { background: #e5e7eb; border-radius: 999px; height: 8px; width: 180px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 999px; background: var(--teal); }
+
+    /* PORTFOLIO SECTION DIVIDER */
+    .portfolio-divider { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); color: var(--white); padding: 3rem 2rem; text-align: center; }
+    .portfolio-divider h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; }
+    .portfolio-divider h2 span { color: #5eead4; }
+    .portfolio-divider p { color: #9ca3af; margin-top: .5rem; font-size: 1rem; }
+
+    /* INDUSTRY LABELS */
     .industry-label { display: inline-block; background: var(--teal-light); color: var(--teal); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 4px; margin-bottom: 2rem; }
 
     /* DASHBOARD CARDS */
@@ -76,13 +136,6 @@
     details code { font-family: 'Cascadia Code', 'Fira Code', monospace; }
     .kw { color: #cba6f7; } .fn { color: #89b4fa; } .st { color: #a6e3a1; } .cm { color: #585b70; font-style: italic; }
 
-    /* SKILLS TABLE */
-    .skills-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
-    .skills-table th { text-align: left; padding: .6rem 1rem; background: #f3f4f6; color: var(--muted); font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; }
-    .skills-table td { padding: .75rem 1rem; border-top: 1px solid var(--border); }
-    .bar-wrap { background: #e5e7eb; border-radius: 999px; height: 8px; width: 180px; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 999px; background: var(--teal); }
-
     /* TABLEAU EMBED */
     .live-banner { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); border-radius: 12px; padding: 2rem; color: var(--white); text-align: center; margin-bottom: 2rem; }
     .live-banner h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .5rem; }
@@ -90,13 +143,6 @@
     .live-banner a { display: inline-block; background: var(--teal); color: var(--white); padding: .6rem 1.4rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .9rem; }
     .tableau-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: var(--white); }
     .tableauPlaceholder { position: relative; }
-
-    /* ABOUT */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } nav ul { display: none; } .metrics-grid { grid-template-columns: repeat(2, 1fr); } }
-    .about-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
-    .about-card h3 { font-size: 1rem; font-weight: 700; color: var(--teal); margin-bottom: .75rem; }
-    .about-card p { font-size: .9rem; color: var(--mid); }
 
     /* CTA */
     .cta { background: linear-gradient(135deg, #000000 0%, #000000 55%, #0f4c49 100%); color: var(--white); text-align: center; padding: 4rem 2rem; }
@@ -106,16 +152,25 @@
     .cta-links a { background: var(--teal); color: var(--white); padding: .7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .9rem; }
     .cta-links a.ghost { background: transparent; border: 1px solid rgba(255,255,255,.3); }
     .cta-links a.ghost:hover { background: rgba(255,255,255,.08); }
+
+    /* ABOUT CARDS */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } .metrics-grid { grid-template-columns: repeat(2, 1fr); } .skills-blocks { grid-template-columns: 1fr 1fr; } }
+    .about-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+    .about-card h3 { font-size: 1rem; font-weight: 700; color: var(--teal); margin-bottom: .75rem; }
+    .about-card p { font-size: .9rem; color: var(--mid); }
   </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="logo">Abdul <span>Sulu-Gambari</span></div>
+  <div class="logo">Abdulrahman <span>Sulu-Gambari</span></div>
   <ul>
-    <li><a href="#about">About</a></li>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#dashboards">Dashboards</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#live">Live Demo</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -123,16 +178,263 @@
 
 <!-- HERO -->
 <div class="hero">
-  <h1>BI Dashboard <span>Portfolio</span></h1>
-  <p>BI Analyst · BI Developer · BI Architect · Data Analyst </p>
+  <h1>Abdulrahman <span>Sulu-Gambari</span></h1>
+  <div class="title">Senior Business Intelligence Analyst &nbsp;·&nbsp; BI Developer &nbsp;·&nbsp; BI Architect &nbsp;·&nbsp; Data Analyst</div>
   <div class="badges">
-    <a class="badge teal" href="mailto:asgambari@gmail.com">✉ asgambari@gmail.com</a>
+    <a class="badge filled" href="mailto:asgambari@gmail.com">✉ asgambari@gmail.com</a>
     <a class="badge" href="tel:+4915213879989">📞 +49 1521 387 9989</a>
-    <a class="badge" href="#">💼 LinkedIn</a>
+    <a class="badge" href="https://linkedin.com/in/sulu-gambari" target="_blank">💼 linkedin.com/in/sulu-gambari</a>
+    <a class="badge" href="#">📍 Duisburg, Germany</a>
   </div>
 </div>
 
 <!-- METRICS -->
+<div class="metrics">
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="num">10+</div><div class="label">Years Experience</div></div>
+    <div class="metric-card"><div class="num">21</div><div class="label">Dashboards Built</div></div>
+    <div class="metric-card"><div class="num">4</div><div class="label">Industries Covered</div></div>
+    <div class="metric-card"><div class="num">€3.7M+</div><div class="label">Revenue Analysed</div></div>
+    <div class="metric-card"><div class="num">95%</div><div class="label">User Satisfaction Rate</div></div>
+    <div class="metric-card"><div class="num">20%</div><div class="label">Reporting Time Reduced</div></div>
+  </div>
+</div>
+
+<!-- CV SECTION -->
+<div class="container">
+
+  <section id="profile">
+    <h2 class="section-title">👤 Profile</h2>
+    <div class="cv-grid">
+
+      <!-- SIDEBAR -->
+      <div class="cv-sidebar">
+
+        <div class="cv-sidebar-block">
+          <h3>Contact</h3>
+          <div class="cv-contact-item"><span class="cv-contact-icon">✉</span><a href="mailto:asgambari@gmail.com">asgambari@gmail.com</a></div>
+          <div class="cv-contact-item"><span class="cv-contact-icon">📞</span>+49 1521 387 9989</div>
+          <div class="cv-contact-item"><span class="cv-contact-icon">📍</span>Duisburg, Germany</div>
+          <div class="cv-contact-item"><span class="cv-contact-icon">💼</span><a href="https://linkedin.com/in/sulu-gambari" target="_blank">linkedin.com/in/sulu-gambari</a></div>
+        </div>
+
+        <div class="cv-sidebar-block">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <div class="degree">Specialisation in AI Project Management</div>
+            <div class="school">neuefische GmbH</div>
+            <div class="location">Berlin, Germany</div>
+          </div>
+          <div class="edu-item">
+            <div class="degree">Master's in Computational Data Science Management</div>
+            <div class="school">University of Bozen-Bolzano</div>
+            <div class="location">Bozen-Bolzano, Italy</div>
+          </div>
+          <div class="edu-item">
+            <div class="degree">Bachelor of Information Technology Management</div>
+            <div class="school">Multimedia University</div>
+            <div class="location">Melaka, Malaysia</div>
+          </div>
+        </div>
+
+        <div class="cv-sidebar-block">
+          <h3>Certificates</h3>
+          <div class="cert-item">Data Modeling for Microsoft Power BI — SQLBI Certified</div>
+          <div class="cert-item">Power BI Data Analyst Associate</div>
+          <div class="cert-item">Tableau Certified Data Analyst</div>
+        </div>
+
+        <div class="cv-sidebar-block">
+          <h3>Languages</h3>
+          <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Native / C2</span></div>
+          <div class="lang-item"><span class="lang-name">Italian</span><span class="lang-level">Fluent / C1</span></div>
+          <div class="lang-item"><span class="lang-name">German</span><span class="lang-level">Conversational / B1</span></div>
+        </div>
+
+      </div>
+
+      <!-- MAIN PROFILE -->
+      <div>
+        <div class="cv-profile">
+          I am an accomplished Data professional with <strong>10+ years of overall experience</strong>, specializing in driving strategic decisions through advanced BI, data analytics, and workflow automation. Proven expert in leading cross-functional teams to translate complex requirements into actionable business insights. Highly skilled in engineering high-impact dashboards (Power BI, Tableau, and others) and integrating web analytics and AI project management to optimize operational efficiency.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2 class="section-title">💼 Professional Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Senior Business Intelligence Analyst | Expert Data</div>
+        <div class="exp-company">ELEMENT Insurance AG</div>
+        <div class="exp-meta">Oct 2023 – Present &nbsp;·&nbsp; Berlin, Germany</div>
+      </div>
+      <ul class="exp-bullets">
+        <li><strong>Team Leadership & Stakeholder Management:</strong> Led a cross-functional BI team and collaborated with key stakeholders to translate complex business requirements into actionable data insights, recommendations, and financial reports for diverse business areas.</li>
+        <li><strong>Advanced Data Visualization:</strong> Designed and maintained high-impact dashboards highlighting company trends and KPI performances across a diverse range of business areas.</li>
+        <li><strong>Web Analytics & Insights:</strong> Developed and managed Google Analytics tracking, driving a 15% increase in conversion insights through deeper customer journey analysis.</li>
+        <li><strong>Data Integrity & Process Optimization:</strong> Collaborated with data engineers to ensure system uptime and data accuracy, while redesigning data pipeline workflows to reduce manual reporting time by 20%.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Business Intelligence and Analytics Manager</div>
+        <div class="exp-company">Front Row</div>
+        <div class="exp-meta">May 2021 – Sep 2023 &nbsp;·&nbsp; Hamburg, Germany</div>
+      </div>
+      <ul class="exp-bullets">
+        <li><strong>Enterprise Solution Delivery:</strong> Implemented advanced data management and BI solutions for high-profile global brands including Unilever, Deutsche Bahn, Lucanet, Bitwarden, Lichtblick and Mammut to streamline data collection and maximize profitability.</li>
+        <li><strong>Strategic Dashboard & Analytics Engineering:</strong> Analyzed raw data and business requirements to engineer intuitive dashboards and reports, providing executives with actionable insights and strategic growth recommendations.</li>
+        <li><strong>Process Optimization & System Maintenance:</strong> Continuously enhanced existing dashboards, data extraction/integration methods, and business workflows to elevate operational efficiency.</li>
+        <li><strong>Enablement & Documentation:</strong> Authored comprehensive technical documentation and conducted specialized user workshops on dashboard and web analytics implementation, achieving a 95% user satisfaction rate.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">IT Global Service Management Specialist</div>
+        <div class="exp-company">Röchling Automotive S.r.l.</div>
+        <div class="exp-meta">Nov 2020 – May 2021 &nbsp;·&nbsp; Laives, Italy</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Designed and configured customized services to meet stakeholder-specific needs.</li>
+        <li>Successfully implemented new processes and services while efficiently managing the business platform.</li>
+        <li>Developed solutions to support service management, collaborating with departments to adopt an ESM approach.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">ERP Consultant</div>
+        <div class="exp-company">Asseco Solutions s.r.l.</div>
+        <div class="exp-meta">May 2019 – Dec 2019 &nbsp;·&nbsp; Bozen-Bolzano, Italy</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Implemented the introduction and support of SAP ERP projects in small and medium-sized enterprises.</li>
+        <li>Built SAP Analytics Cloud dashboards based on client data to achieve key business insights and performances.</li>
+        <li>Assisted in the customisation and implementation of a new SAP ERP system that improved business processes.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Digital Marketing Engineer</div>
+        <div class="exp-company">Alkyma</div>
+        <div class="exp-meta">Apr 2018 – Apr 2019 &nbsp;·&nbsp; Bozen-Bolzano, Italy</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Created and executed digital content strategies, maximizing digital marketing impact.</li>
+        <li>Developed creative concepts and designs for websites, print collateral, and digital marketing campaigns.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-role">Medical IT Incidence Specialist</div>
+        <div class="exp-company">Becton Dickinson (BD)</div>
+        <div class="exp-meta">Apr 2016 – Apr 2017 &nbsp;·&nbsp; Kuala Lumpur, Malaysia</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Provided exceptional technical support to internal and external clients, effectively resolving software/hardware issues and technical incidents for BD automated dispensing "Pyxis" platform machines and devices.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="section-title">🛠️ Skills</h2>
+
+    <div class="skills-blocks">
+      <div class="skill-block">
+        <h4>BI & Visualization</h4>
+        <ul>
+          <li>Dashboard Design</li>
+          <li>BI Architecture & Maintenance</li>
+          <li>Predictive Analytics</li>
+          <li>Power BI · Tableau · Looker Studio</li>
+          <li>SAP SAC · Metabase · Adobe Analytics · CRMA+</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h4>Data Analysis</h4>
+        <ul>
+          <li>KPI Analysis</li>
+          <li>Self-service BI</li>
+          <li>Actionable Insight Generation</li>
+          <li>Data Pipeline Workflow Redesign</li>
+          <li>SQL · Python</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h4>Data Management & ETL</h4>
+        <ul>
+          <li>ETL Processes</li>
+          <li>Data Cleaning & Integration</li>
+          <li>Data Governance & Privacy</li>
+          <li>BigQuery · Funnel.io</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h4>Web & Digital Analytics</h4>
+        <ul>
+          <li>GA4 Tracking Implementation</li>
+          <li>Google Tag Manager</li>
+          <li>Adobe Analytics</li>
+          <li>A/B Testing</li>
+          <li>Performance Metrics</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h4>Automation & Process</h4>
+        <ul>
+          <li>Power Automate · Zapier</li>
+          <li>Business Process Optimization</li>
+          <li>BPMN · UML · Archimate</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h4>Other Skills</h4>
+        <ul>
+          <li>Project Management</li>
+          <li>Stakeholder Engagement</li>
+          <li>Agile Methodologies</li>
+          <li>Customer Journey Mapping</li>
+          <li>User Workshop Facilitation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <h3 style="font-size:.85rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-bottom:1rem;">BI Tool Proficiency</h3>
+      <table class="skills-table">
+        <thead><tr><th>Tool</th><th>Level</th><th>Proficiency</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Power BI</strong></td><td>Advanced</td><td><div class="bar-wrap"><div class="bar-fill" style="width:85%"></div></div></td></tr>
+          <tr><td><strong>Tableau</strong></td><td>Advanced</td><td><div class="bar-wrap"><div class="bar-fill" style="width:80%"></div></div></td></tr>
+          <tr><td><strong>Google Looker Studio</strong></td><td>Advanced</td><td><div class="bar-wrap"><div class="bar-fill" style="width:78%"></div></div></td></tr>
+          <tr><td><strong>Metabase</strong></td><td>Intermediate</td><td><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div></td></tr>
+          <tr><td><strong>Adobe Analytics</strong></td><td>Intermediate</td><td><div class="bar-wrap"><div class="bar-fill" style="width:55%"></div></div></td></tr>
+          <tr><td><strong>Salesforce CRMA+</strong></td><td>Intermediate</td><td><div class="bar-wrap"><div class="bar-fill" style="width:48%"></div></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<!-- PORTFOLIO DIVIDER -->
+<div class="portfolio-divider" id="portfolio">
+  <h2>BI Dashboard <span>Portfolio</span></h2>
+  <p>21 dashboards across 4 industries — Power BI · Tableau · Looker Studio</p>
+</div>
+
+<!-- PORTFOLIO METRICS -->
 <div class="metrics">
   <div class="metrics-grid">
     <div class="metric-card"><div class="num">21</div><div class="label">Dashboards Built</div></div>
@@ -144,43 +446,9 @@
   </div>
 </div>
 
+<!-- DASHBOARDS -->
 <div class="container">
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2 class="section-title">⭐ About Me</h2>
-    <p style="color:var(--mid); margin-bottom:1.5rem; font-size:.95rem;">I am an accomplished <strong>Business Intelligence and Data Analyst</strong> with extensive experience driving strategic decisions through advanced data analytics and visualization. I specialize in turning complex, raw datasets into intuitive, high-impact dashboards, collaborating closely with cross-functional teams to gather business requirements and deliver actionable insights that directly improve operational efficiency.</p>
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>🎯 Vision</h3>
-        <p>To transform complex, raw datasets into intuitive, high-impact visual stories that bridge the gap between technical data and strategic action — empowering organizations to make fast, informed, data-driven decisions.</p>
-      </div>
-      <div class="about-card">
-        <h3>🚀 Mission</h3>
-        <p>To change how organizations interact with data by building a culture of seamless self-service business intelligence — designing solutions that are visually engaging, highly functional, and accurate at every stakeholder level.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2 class="section-title">🛠️ BI Tools</h2>
-    <table class="skills-table">
-      <thead><tr><th>Tool</th><th>Level</th><th>Proficiency</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Power BI</strong></td><td>Advanced</td><td><div class="bar-wrap"><div class="bar-fill" style="width:85%"></div></div></td></tr>
-        <tr><td><strong>Tableau</strong></td><td>Advanced</td><td><div class="bar-wrap"><div class="bar-fill" style="width:80%"></div></div></td></tr>
-        <tr><td><strong>Google Looker Studio</strong></td><td>Advanced</td><td><div class="bar-wrap"><div class="bar-fill" style="width:78%"></div></div></td></tr>
-        <tr><td><strong>Metabase</strong></td><td>Intermediate</td><td><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div></td></tr>
-        <tr><td><strong>Adobe Analytics</strong></td><td>Intermediate</td><td><div class="bar-wrap"><div class="bar-fill" style="width:55%"></div></div></td></tr>
-        <tr><td><strong>Salesforce CRMA+</strong></td><td>Intermediate</td><td><div class="bar-wrap"><div class="bar-fill" style="width:48%"></div></div></td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- DASHBOARDS -->
   <section id="dashboards">
-    <h2 class="section-title">📈 Portfolio Dashboards</h2>
 
     <!-- INSURANCE -->
     <div class="industry-label">🏥 Insurance &amp; Claims</div>
@@ -533,7 +801,7 @@
   <div class="cta-links">
     <a href="mailto:asgambari@gmail.com">✉ asgambari@gmail.com</a>
     <a href="tel:+4915213879989" class="ghost">📞 +49 1521 387 9989</a>
-    <a href="#" class="ghost">💼 LinkedIn</a>
+    <a href="https://linkedin.com/in/sulu-gambari" target="_blank" class="ghost">💼 LinkedIn</a>
   </div>
 </div>
 
